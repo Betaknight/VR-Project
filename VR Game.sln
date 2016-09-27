@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR Game.CSharp", "VR Game.CSharp.csproj", "{4387D0FD-7693-F71F-D939-FE19E44E8514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR Game.CSharp.Editor", "VR Game.CSharp.Editor.csproj", "{7B0B3D4A-D553-A3F9-F6BB-9999765F356C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4387D0FD-7693-F71F-D939-FE19E44E8514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4387D0FD-7693-F71F-D939-FE19E44E8514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4387D0FD-7693-F71F-D939-FE19E44E8514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4387D0FD-7693-F71F-D939-FE19E44E8514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B0B3D4A-D553-A3F9-F6BB-9999765F356C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B0B3D4A-D553-A3F9-F6BB-9999765F356C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B0B3D4A-D553-A3F9-F6BB-9999765F356C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B0B3D4A-D553-A3F9-F6BB-9999765F356C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
