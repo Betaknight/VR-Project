@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WandController : MonoBehaviour {
-
+public class WandController : MonoBehaviour
+{
     private Valve.VR.EVRButtonId gripButton = Valve.VR.EVRButtonId.k_EButton_Grip;
     public bool gripButtonDown = false;
     public bool gripButtonUp = false;
@@ -12,6 +12,26 @@ public class WandController : MonoBehaviour {
     public bool triggerButtonDown = false;
     public bool triggerButtonUp = false;
     public bool triggerButtonPressed = false;
+
+    private Valve.VR.EVRButtonId dPad_Up = Valve.VR.EVRButtonId.k_EButton_DPad_Up;
+    public bool dPad_UpDown = false;
+    public bool dPad_UpUp = false;
+    public bool dPad_UpPressed = false;
+
+    private Valve.VR.EVRButtonId dPad_Down = Valve.VR.EVRButtonId.k_EButton_DPad_Down;
+    public bool dPad_DownDown = false;
+    public bool dPad_DownUp = false;
+    public bool dPad_DownPressed = false;
+
+    private Valve.VR.EVRButtonId dPad_Right = Valve.VR.EVRButtonId.k_EButton_DPad_Right;
+    public bool dPad_RightDown = false;
+    public bool dPad_RightUp = false;
+    public bool dPad_RightPressed = false;
+
+    private Valve.VR.EVRButtonId dPad_Left = Valve.VR.EVRButtonId.k_EButton_DPad_Left;
+    public bool dPad_LeftDown = false;
+    public bool dPad_LeftUp = false;
+    public bool dPad_LeftPressed = false;
 
     private SteamVR_Controller.Device controller {  get { return SteamVR_Controller.Input((int)trackedObj.index); } }
     private SteamVR_TrackedObject trackedObj;
@@ -37,8 +57,24 @@ public class WandController : MonoBehaviour {
         triggerButtonDown = controller.GetPressDown(triggerButton);
         triggerButtonUp = controller.GetPressUp(triggerButton);
         triggerButtonPressed = controller.GetPress(triggerButton);
-        
-        if(gripButtonDown)
+
+        dPad_UpDown = controller.GetPressDown(dPad_Up);
+        dPad_UpUp = controller.GetPressUp(dPad_Up);
+        dPad_UpPressed = controller.GetPress(dPad_Up);
+
+        dPad_DownDown = controller.GetPressDown(dPad_Down);
+        dPad_DownUp = controller.GetPressUp(dPad_Down);
+        dPad_DownPressed = controller.GetPress(dPad_Down);
+
+        dPad_RightDown = controller.GetPressDown(dPad_Right);
+        dPad_RightUp = controller.GetPressUp(dPad_Right);
+        dPad_RightPressed = controller.GetPress(dPad_Right);
+
+        dPad_LeftDown = controller.GetPressDown(dPad_Left);
+        dPad_LeftUp = controller.GetPressUp(dPad_Left);
+        dPad_LeftPressed = controller.GetPress(dPad_Left);
+
+        if (gripButtonDown)
         {
             Debug.Log("Grip Button was pressed");
         }
@@ -56,6 +92,16 @@ public class WandController : MonoBehaviour {
         if (triggerButtonUp)
         {
             Debug.Log("trigger Button was released");
+        }
+
+        if (dPad_UpDown || dPad_DownDown || dPad_RightDown || dPad_LeftDown)
+        {
+            Debug.Log("the dpad was pressed was pressed");
+        }
+
+        if (dPad_UpUp || dPad_DownUp || dPad_RightUp || dPad_LeftUp)
+        {
+            Debug.Log("the dpad was released");
         }
     }
 }
