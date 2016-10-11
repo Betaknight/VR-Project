@@ -4,33 +4,33 @@ using System.Collections;
 public class WandController : MonoBehaviour
 {
     private Valve.VR.EVRButtonId gripButton = Valve.VR.EVRButtonId.k_EButton_Grip;
-    public bool gripButtonDown = false;
-    public bool gripButtonUp = false;
+    private bool gripButtonDown = false;
+    private bool gripButtonUp = false;
     public bool gripButtonPressed = false;
 
     private Valve.VR.EVRButtonId triggerButton = Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger;
-    public bool triggerButtonDown = false;
-    public bool triggerButtonUp = false;
+    private bool triggerButtonDown = false;
+    private bool triggerButtonUp = false;
     public bool triggerButtonPressed = false;
 
     private Valve.VR.EVRButtonId dPad_Up = Valve.VR.EVRButtonId.k_EButton_DPad_Up;
-    public bool dPad_UpDown = false;
-    public bool dPad_UpUp = false;
+    private bool dPad_UpDown = false;
+    private bool dPad_UpUp = false;
     public bool dPad_UpPressed = false;
 
     private Valve.VR.EVRButtonId dPad_Down = Valve.VR.EVRButtonId.k_EButton_DPad_Down;
-    public bool dPad_DownDown = false;
-    public bool dPad_DownUp = false;
+    private bool dPad_DownDown = false;
+    private bool dPad_DownUp = false;
     public bool dPad_DownPressed = false;
 
     private Valve.VR.EVRButtonId dPad_Right = Valve.VR.EVRButtonId.k_EButton_DPad_Right;
-    public bool dPad_RightDown = false;
-    public bool dPad_RightUp = false;
+    private bool dPad_RightDown = false;
+    private bool dPad_RightUp = false;
     public bool dPad_RightPressed = false;
 
     private Valve.VR.EVRButtonId dPad_Left = Valve.VR.EVRButtonId.k_EButton_DPad_Left;
-    public bool dPad_LeftDown = false;
-    public bool dPad_LeftUp = false;
+    private bool dPad_LeftDown = false;
+    private bool dPad_LeftUp = false;
     public bool dPad_LeftPressed = false;
 
     private SteamVR_Controller.Device controller {  get { return SteamVR_Controller.Input((int)trackedObj.index); } }
